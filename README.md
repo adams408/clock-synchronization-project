@@ -34,8 +34,8 @@ docker-compose down // stops running your containers. use if changes made to the
 
 docker ps // will list currently running docker containers.
 
-docker exec -it <CONTAINER NAME> bash // create an interactive bash shell inside the docker container.
+docker exec -it "CONTAINER NAME" bash // create an interactive bash shell inside the docker container.
 
-test: ping <IPAddress OF ANOTHER CONTAINER> // to show the containers can talk to one another.
+test: ping "IPAddress OF ANOTHER CONTAINER" // to show the containers can talk to one another.
 
-docker inspect <CONTAINER NAME> // shows you the IP addresses assigned to a particular container.
+docker inspect "CONTAINER NAME" // shows you the IP addresses assigned to a particular container.
