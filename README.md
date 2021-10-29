@@ -18,17 +18,13 @@ github clone: git clone git@github.com:adams408/clock-synchronization-project.gi
 
 run docker containers with docker-compose
 
-docker-compose build // pull any images if necessary, build image.
+docker-compose build // pull any images if necessary, build image. if changes are made to the dockerfile call this to rebuild the image.
 
-docker-compose up -d // run containers in the background.
+docker-compose up -d // executes the docker-compose.yml to start all containers. include the -d flag to run in the background.
 
 ---
 
 common docker commands
-
-docker-compose build // if changes are made to the dockerfile call this to rebuild the image.
-
-docker-compose up -d // executes the docker-compose.yml to start all containers. include the -d flag to run in the background.
 
 docker-compose down // stops running your containers. use if changes made to the image.
 
