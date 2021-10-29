@@ -38,4 +38,4 @@ docker exec -it <CONTAINER NAME> bash // create an interactive bash shell inside
 
 test: ping <IPAddress OF ANOTHER CONTAINER> // to show the containers can talk to one another.
 
-docker inspect <CONTAINER NAME> | grep \"IPAddress\" // shows you the IP addresses assigned to a particular container.
+docker inspect <CONTAINER NAME> // shows you the IP addresses assigned to a particular container.
