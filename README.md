@@ -1,37 +1,26 @@
-# clock-synchronization-project
+# Clock Synchronization Project
+## Setup
+[Install Docker](https://docs.docker.com/desktop/install/windows-install/)<br>
+#### Clone the Repository:
 
-install docker
+    git clone git@github.com:adams408/clock-synchronization-project.git
+## Run the Containers
+Pull any images if necessary, and build the image. if changes are made to the dockerfile call this to rebuild the image.
 
-install the latest docker desktop
+    docker-compose build
 
-open powershell as administrator, execute this command: wsl --install // restart computer. now the docker daemon should be running.
+Executes the docker-compose.yml to start all containers. include the -d flag to run in the background.
 
-open a command terminal to execute docker commands.
+    docker-compose up -d
+## Common Docker Commands
+`docker-compose down`[^1]<br>
+`docker ps`[^2]<br>
+`docker inspect "CONTAINER NAME"`[^3]<br>
+`docker exec -it "CONTAINER NAME" bash`[^4]<br>
+`ping "IPADDRESS OF CONTAINER"`[^5]
 
-check for latest docker-compose version on your machine use: docker-compose --version
-
-test: docker run -it ubuntu // will automatically pull down the ubuntu image from dockerhub and then run the linux machine and enter you into a bash shell. exit with "exit".
-
----
-
-github clone: git clone git@github.com:adams408/clock-synchronization-project.git
-
-run docker containers with docker-compose
-
-docker-compose build // pull any images if necessary, build image. if changes are made to the dockerfile call this to rebuild the image.
-
-docker-compose up -d // executes the docker-compose.yml to start all containers. include the -d flag to run in the background.
-
----
-
-common docker commands
-
-docker-compose down // stops running your containers. use if changes made to the image.
-
-docker ps // will list currently running docker containers.
-
-docker exec -it "CONTAINER NAME" bash // create an interactive bash shell inside the docker container.
-
-test: ping "IPADDRESS OF ANOTHER CONTAINER" // show the containers can talk to one another.
-
-docker inspect "CONTAINER NAME" // shows you the info of a particular container.
+[^1]: Stops running your containers. use if changes are made to the image.
+[^2]: Will list currently running docker containers.
+[^3]: Shows you the info of a particular container.
+[^4]: Create an interactive bash shell inside the docker container.
+[^5]: Show the containers can talk to one another.
